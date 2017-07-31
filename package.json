@@ -1,0 +1,44 @@
+{
+  "name": "959.js",
+  "description": "Simple ftp server.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/nyon/959.js",
+  "author": {
+    "name": "Timm Decker",
+    "email": "me@nyon.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nyon/959.js.git"
+  },
+  "bin": {
+    "959.js": "./bin/959.js"
+  },
+  "bugs": {
+    "url": "https://github.com/nyon/959.js/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/nyon/959.js/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "dist/start.js",
+  "engines": {
+    "node": ">= 4"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "gruntify-eslint": "^4.0.0"
+  },
+  "keywords": [],
+  "dependencies": {
+    "moment": "^2.18.1"
+  }
+}

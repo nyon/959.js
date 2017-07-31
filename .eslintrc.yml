@@ -1,0 +1,14 @@
+extends: airbnb-base
+rules:
+  space-before-function-paren:
+    - error
+    - never
+  keyword-spacing:
+    - error
+    - overrides:
+        if:
+          after: false
+        for:
+          after: false
+        while:
+          after: false
