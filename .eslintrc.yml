@@ -12,3 +12,5 @@ rules:
           after: false
         while:
           after: false
+        catch:
+          after: false
