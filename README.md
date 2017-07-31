@@ -53,9 +53,6 @@ After this, you can start your FTP-Server like the following:
 
 `sudo` is necessary, because it has to be bound to port 21.
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
 ## License
 Copyright (c) 2017 Timm Decker  
 Licensed under the MIT license.
