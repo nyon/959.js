@@ -9,13 +9,15 @@ A simple FTP server written in pure ECMAScript 6.
 * Implements RFC 697 (CWD)
 * CHMOD of files
 * Working directories per user
+* port ranges for passive mode
+* instant configuration reloading. you do not have to restart the ftp server when you change the ftp-config.json
 
 ## Planned features:
 
 I plan implementing the following features. Pull requests are welcomed.
 
 * Simple installation: `npm install -g 959.js && 959.js`
-* port ranges for passive mode (currently only leet ports supported)
+* configurable configuration file name
 * Docker image
 * Windows compatibility
 * Anonymous support
@@ -53,6 +55,15 @@ After this, you can start your FTP-Server like the following:
     sudo node dist/server.js
 
 `sudo` is necessary, because it has to be bound to port 21.
+
+To configure the passive ports used you can edit the configuration file like this:
+
+    {
+        "passivePorts": ["10000-11000", "1337"],
+        "users": [
+            // ...
+        ]
+    }
 
 ## License
 Copyright (c) 2017 Timm Decker  
