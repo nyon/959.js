@@ -16,7 +16,6 @@ A simple FTP server written in pure ECMAScript 6.
 
 I plan implementing the following features. Pull requests are welcomed.
 
-* Simple installation: `npm install -g 959.js && 959.js`
 * configurable configuration file name
 * Docker image
 * Windows compatibility
@@ -30,40 +29,40 @@ I plan implementing the following features. Pull requests are welcomed.
 
 ## Usage
 
-Because there is no npm module published, you need to `git clone` this repository directly and run the following command:
+Install 959.js with the following command:
 
-    grunt babel && node dist/user.js [YOUR_USERNAME] [YOUR_PASSWORD]
+    npm install -g 959.js
 
-This outputs something like:
+Then create a file named `ftp-config.json` in a directory which will contain the server configuration.
 
-    sha512#9ba1f63365a6caf66e46348f43cdef956015bea997adeb06e69007ee3ff517df10fc5eb860da3d43b82c2a040c931119d2dfc6d08e253742293a868cc2d82015
+    {}
 
-Copy this string and put it in a file named ftp-config.json
-
-    {
-      "users": [
-        {
-          "directory": "/var/ftp/[YOUR_USERNAME]",
-          "username": "[YOUR_USERNAME]",
-          "password": "sha512#9ba1f63365a6caf66e46348f43cdef956015bea997adeb06e69007ee3ff517df10fc5eb860da3d43b82c2a040c931119d2dfc6d08e253742293a868cc2d82015"
-        }
-      ]
-    }
+Then you can add and remove users by using `nftp add-user [YOUR_USERNAME]` and answer the questions that are asked.
 
 After this, you can start your FTP-Server like the following:
 
-    sudo node dist/server.js
+    sudo nftp serve
 
 `sudo` is necessary, because it has to be bound to port 21.
 
-To configure the passive ports used you can edit the configuration file like this:
+To configure the passive ports, server address and control port you can edit the configuration file like this:
 
     {
+        "address": "[YOUR_IP_ADDRESS]",
+        "port": 21,
         "passivePorts": ["10000-11000", "1337"],
         "users": [
             // ...
         ]
     }
+
+## Troubleshooting
+
+* `sudo: nftp: command not found`
+
+  If you encounter this error, then you can workaround this with the following command:
+
+  `sudo $(which nftp) serve`
 
 ## License
 Copyright (c) 2017 Timm Decker
