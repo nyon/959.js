@@ -35,7 +35,7 @@ Because there is no npm module published, you need to `git clone` this repositor
     grunt babel && node dist/user.js [YOUR_USERNAME] [YOUR_PASSWORD]
 
 This outputs something like:
-    
+
     sha512#9ba1f63365a6caf66e46348f43cdef956015bea997adeb06e69007ee3ff517df10fc5eb860da3d43b82c2a040c931119d2dfc6d08e253742293a868cc2d82015
 
 Copy this string and put it in a file named ftp-config.json
@@ -66,5 +66,5 @@ To configure the passive ports used you can edit the configuration file like thi
     }
 
 ## License
-Copyright (c) 2017 Timm Decker  
+Copyright (c) 2017 Timm Decker
 Licensed under the MIT license.
