@@ -1,7 +1,7 @@
 {
   "name": "959.js",
   "description": "Simple node ftp server.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/nyon/959.js",
   "author": {
     "name": "Timm Decker",
