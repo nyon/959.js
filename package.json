@@ -1,6 +1,6 @@
 {
   "name": "959.js",
-  "description": "Simple ftp server.",
+  "description": "Simple node ftp server.",
   "version": "0.1.0",
   "homepage": "https://github.com/nyon/959.js",
   "author": {
@@ -12,7 +12,9 @@
     "url": "git://github.com/nyon/959.js.git"
   },
   "bin": {
-    "959.js": "./bin/959.js"
+    "959.js": "./bin/959.js",
+    "nftp": "./bin/959.js"
+
   },
   "bugs": {
     "url": "https://github.com/nyon/959.js/issues"
@@ -23,7 +25,7 @@
       "url": "https://github.com/nyon/959.js/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "dist/start.js",
+  "main": "bin/959.js",
   "engines": {
     "node": ">= 4"
   },
